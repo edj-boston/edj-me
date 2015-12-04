@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+- '0.11'
+- '0.10'
+env:
+  global:
+  - secure: a2KTdTB5CEbw3sBd2JR8ui1+3OkxaRinq9hHjontYK6wEQTgyZno9SWOJx870SlZESIpjNPmGCRsDorvfoV9c8LnDZQqNsMLk7atMjBJe4St0/TC2M689JH62dLfxvRaqt+gz2U3DC0qQZ0yWbAbvGo4nswhYKSZX3xQDgZBYsM=
+  - secure: iElNCED7zPHL3pHRaLyLYxMmhieF7tOxe3bG3T3mIYBf2TVR9kA7FoMEpJEG5B59RKUEy7RhScbjnwOwMKCLv9RhXKN4fb5hVOMd0nntjM+rdr9ykEVGf1BH9qsz39z/TyAM1MyFwwf15HJZjKHADcHq2MCH43LQfKhYDV4Sk4c=
+deploy:
+- provider: s3
+  region: us-west-2
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  detect_encoding: true
+  local_dir: build
+  skip_cleanup: true
+  bucket: edj-me
+  on:
+    branch: master
+    node_js: '4.2'
+- provider: s3
+  region: us-west-2
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  detect_encoding: true
+  local_dir: build
+  skip_cleanup: true
+  bucket: stage-edj-me
+  on:
+    branch: develop
+    node_js: '4.2'
