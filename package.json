@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/edj-boston/edj-me/issues"
   },
-  "homepage": "https://github.com/edj-boston/edj-me"
+  "homepage": "https://github.com/edj-boston/edj-me",
+  "dependencies": {
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-gzip": "^1.2.0",
+    "gulp-mocha": "^2.2.0"
+  }
 }
