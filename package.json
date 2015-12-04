@@ -1,0 +1,24 @@
+{
+  "name": "edj-me",
+  "version": "0.1.0",
+  "description": "Personal blog",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:edj-boston/edj-me.git"
+  },
+  "keywords": [
+    "Eric",
+    "Johnson",
+    "Blog"
+  ],
+  "author": "Eric Johnson <edj.boston@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edj-boston/edj-me/issues"
+  },
+  "homepage": "https://github.com/edj-boston/edj-me"
+}
